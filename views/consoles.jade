@@ -1,0 +1,49 @@
+doctype html
+html
+head
+    title ShopIT: Online Mega Store
+    link(href='css/templatemo_style.css', rel='stylesheet', type='text/css')
+    link(href='css/ddsmoothmenu.css', rel='stylesheet', type='text/css')
+  body
+    #templatemo_wrapper
+      #templatemo_header
+        #site_title
+          h1 ShopIT
+        .cleaner
+      //
+         END of templatemo_header 
+      #templatemo_menu
+        #top_nav.ddsmoothmenu
+          ul
+            li
+              a.selected(href='/') Home
+          br(style='clear: left;')
+        //
+           end of ddsmoothmenu
+      #templatemo_main
+        #sidebar.float_l
+          .sidebar_box
+            span.bottom
+            h3 Categories
+            .content
+              ul.sidebar_list
+                li.first
+                  a(href='/laptops') Laptops
+                li
+                  a(href='/tablets') Tablets
+                li
+                  a(href='/headphones') Headphones
+                li
+                  a(href='/consoles') Gaming Consoles
+                .cleaner
+        #content.float_r
+          h1 Gaming Consoles
+          each item, i in consoles
+            .product_box
+              a(class='button', href='/consoles-#{item.sku}') 
+                img(src='images/product/#{item.sku}.jpg', alt='Consoles')
+              h3 #{item.title}
+        .cleaner
+      //
+         END of templatemo_main 
+      

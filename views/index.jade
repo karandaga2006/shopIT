@@ -1,0 +1,68 @@
+doctype html
+html
+    title ShopIT: Online Mega Store
+    link(href='css/templatemo_style.css', rel='stylesheet', type='text/css')
+    link(href='css/ddsmoothmenu.css', rel='stylesheet', type='text/css')
+  body
+    #templatemo_wrapper
+      #templatemo_header
+        #site_title
+          h1 ShopIT
+        .cleaner
+      //
+         END of templatemo_header 
+      #templatemo_menu
+        #top_nav.ddsmoothmenu
+          ul
+            li
+              a.selected(href='/') Home
+          br(style='clear: left;')
+        //
+           end of ddsmoothmenu
+      #templatemo_main
+        #sidebar.float_l
+          .sidebar_box
+            span.bottom
+            h3 Categories
+            .content
+              ul.sidebar_list
+                li.first
+                  a(href='/laptops') Laptops
+                li
+                  a(href='/tablets') Tablets
+                li
+                  a(href='/headphones') Headphones
+                li
+                  a(href='/consoles') Gaming Consoles
+                .cleaner
+        #content.float_r
+          h1 In Store
+          .product_box
+            a(href='/laptops')
+              img(src='images/product/laptops.jpg', alt='Laptops')
+            h3 Laptops
+          .product_box
+            a(href='/tablets')
+              img(src='images/product/tablets.jpg', alt='Tablets')
+            h3 Tablets
+          .product_box
+            a(href='/headphones')
+              img(src='images/product/headphones.jpg', alt='Headphones')
+            h3 Headphones
+          .product_box
+            a(href='/consoles')
+              img(src='images/product/consoles.jpg', alt='Consoles')
+            h3 Gaming Consoles
+        .cleaner
+      //
+         END of templatemo_main 
+      #templatemo_footer
+        p
+          a(href='/') Home
+        | Copyright © 2014 AreKay Designs
+        //
+           Credit: www.templatemo.com 
+      //
+         END of templatemo_footer 
+    //
+       END of templatemo_wrapper 

@@ -1,0 +1,80 @@
+doctype html
+html
+head
+    title ShopIT - Product Detail
+    link(href='css/templatemo_style.css', rel='stylesheet', type='text/css')
+    link(href='css/ddsmoothmenu.css', rel='stylesheet', type='text/css')
+  body
+    #templatemo_wrapper
+      #templatemo_header
+        #site_title
+          h1
+            ShopIT: Laptops
+        .cleaner
+      //
+         END of templatemo_header 
+      #templatemo_menu
+        #top_nav.ddsmoothmenu
+          ul
+            li
+              a(href='/') Home
+          br(style='clear: left;')
+        //
+           end of ddsmoothmenu
+      #templatemo_main
+        #sidebar.float_l
+          .sidebar_box
+            span.bottom
+            h3 Categories
+            .content
+              ul.sidebar_list
+                li.first
+                  a(href='/laptops') Laptops
+                li
+                  a(href='/tablets') Tablets
+                li
+                  a(href='/headphones') Headphones
+                li
+                  a(href='/consoles') Gaming Consoles
+                .cleaner
+        #content.float_r
+          each item, i in tablet
+            h1 #{item.title}
+            form(action="http://localhost:8080/shopit/session", method="post")
+              .content_half.float_l
+                img(src='#{item.img}')
+              .content_half.float_r
+                table
+                  <input type='hidden' name='sku' value='#{item.sku}'>
+                  tr
+                    td(height='30', width='160') ASIN:
+                    td #{item.asin}
+                  tr
+                    td(height='30') List Price:
+                    td #{item.listp}
+                  tr
+                    td(height='30') Retail Price:
+                    td #{item.retailp}
+                  tr
+                    td(height='30') Screen Size:
+                    td #{item.screen}
+                  tr
+                    td(height='30') OS:
+                    td #{item.OS}
+                  tr
+                    td(height='30') Processor:
+                    td #{item.processor}
+                  tr
+                    td(height='30') Quantity
+                    td
+                      input(type='text', name='qty' value='1', style='width: 20px; text-align: right;')
+                .cleaner.h20
+                input(type="submit", value="Buy Now")
+              .cleaner.h30
+            h5 Product Description
+            p
+              | #{item.description}
+            .cleaner.h50
+          .cleaner
+      //
+         END of templatemo_main 
